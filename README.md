@@ -1,1 +1,35 @@
-# Determination-of-water-pollution
+# Dimensional-Works
+
+To find the closest distance of the detected edge to the reference point with a certain rotation. Within the determined edge range, it can be determined whether the part is defective or not.
+
+## The following steps were followed as headings in the program:
+<br>
+
+- Taking photographs of the solution created by knowing the amount of chlorine in the chlorine-water solution prepared in the laboratory environment so that it is not affected by light. Increasing the amount of chlorine (mg) linearly (0.1, 0.2, 0.3) and observing the changes in color change and reading the R, G, B values with the help of the program.
+
+- To train photos with known B,G,R values according to the amount of chlorine added with Linear Regression under the name of Machine learning. The purpose of training is to read the B,G,R value of a solution with unknown chlorine content and use it to estimate the chlorine content. 
+
+<br>
+<br>
+
+
+1- 5 images in shades of red were used. One white image with RGB (255,255,255) values was used as a reference.
+
+2- Each picture was uploaded to the program separately and renewed in 800x800 dimensions. The aim is to read the correct value by making each image the same size
+
+3- In order to minimize the margin of error in the read B,G,R" value, a square area of 200x200 was taken with reference to the midpoints of the uploaded images. By selecting a certain area, it gets rid of the noise in the video in the instant reading process.
+
+4- In order to minimize the margin of error, the average values of B, G, R values within the square area were taken and the noise was reduced by performing various morphological operations. The purpose of this process is the pixel-sized black dots that we call noise in the image. By averaging and morphological operations, these points are minimized. 
+<br><br><br>
+![enter image description here](https://lh3.googleusercontent.com/bnEcEl6lFynL4VQ5-Uh8OqPIUnG3i1S5gIkYhu_Ua2HhvKcKtDPmXZuf4j15jJourABtOL8horTKajQoba2PaQHEOxB1cHjk1uTelTHc9pHz-6MPRoAOj1URvv9E_u2rrxMyMokXxxd9uESkWQjyo2XesyDE08uxVYmtsfVmTk84HgJPfRhbi6KRc-VAvtUSvpUuZerTsvnUfYC-TdOZTZ7rVmbxcTy2UHOaRR233tjGMbuHHOx0DM1eQCwG_xXp058tq6-HXCE97TNUk4W7ftLZtRuFCvSVdCKJCYNLaYH9clb-UU_IfO7a8YFK3rV-VtJJWFjKa0mwk8YfLiMrDucUgScdvbeyz2e2GZqCKtjGNjg81ZKiRcsI9LxiMeKvhspHP3K4rP-epB2eTZsbKOJ36ga-udkazkiZsiIoaT2JNFpJ997qJVlDaQ_wzil7oBFCWoykAzccPV8qUxlK16G-LLISDNRpEMeVCn1UCwquUg32k8fgTz497y_x2-6syc_3sfQGfkFOod56jyR_vJkatUcx4oE7xFTqLpN9x6MpnvLc0gfdrW5NRk3HAny5Ts62_xcx8Pe7vWDADHdvtrHyho8zmJibyB21hG1lW5X2eieq-PJ_NlO3fP0_guiBZsalM7tItipHZUl1138sk-h9JDSKoIYQstXgvFyl7r1spaHsFMK_c6UzIrV5yEARlLdtFzzi4Dt3UqxJnSg_o-17tZ2IcHvo9432T8SVdZ49FnXQsUTqXrifcHljqRCjlbdcABzl4Uj10C4RXYHGMzQ7fsETp_Rv4J8L1iiRMpDkqjmSo_jif7rX0FuIqB2Q2qvF_zcg0OHHdh_NomhV7fGbmOP0_4cE7ibMxGebHSY=w419-h252-no?authuser=2)
+
+<br><br><br>
+
+![enter image description here](https://lh3.googleusercontent.com/-vr8Gw142F0KIONqjw3YxFqghrDtID47E3ZYoVsQYY42fvwePN9uRqqbGRK_xlK0BK4BzPTsUEhoSthCQdFTXw43v9bUpdk0xZ-pjDUQaz857odwTG1yqmj9MehI7TCrD4p0GvmA8yDDYYFSGZLjqVE_O4ZWxQKuia0fM6CXF1viGJIaKfeThWBv2PvoZ4TneSuytCApRElXbJ-YMkUJjOgeYAFeKFOV5wAXVqnz6gu5F1vd_be-Mo9XXcQTHh14ybqOqowGYSJw9C1jRR8HVE4RjVpOa9d_e_intNAl79ElSu_q5x1WEU2_QE88TDz9qxpMMgStVQRXk4R_z3PUrSkA-RagiG_I8FQ21u9xr3wrkfwYLXsn_p1vJQT3zq79TXSeuxwy6VykEiD9ZG2qzgIQPkJ5f4Ws6sR0ijm5E8ZCRis-b66V68Hj9k1C211seSImC1PU577XurDDYoGINk64Zdlk0HoONZzrRBJP0FfJlOkRiGUgq08bGk4_gRJKCFMYLRbB_6iLdVuI8JfezD90lOBNTsj9hrr4wneENFFx6KKZGlTDnFtxPQVvNgg9bgXcJy4Xfgmj0iDwQ7O8WSUByLV_NOADy-5OVdbMGhL4JOhyphscwGpeKY_hhda538cydLD2oW_CnkPrxzTmQpaxRcEFDgChn0RNX66Pim6QUPceWwtpM8-cZ_B_8pml7ZM4imcQrhLsDIZ-HYy_wJT_LJ2eR39dbbDyDpHq3aR75cGTDIOmMPzUWGxlOjBmgK9zBWafDYK9UFlGbHR0xM19tsxB2AR808uw0WwoVzm79S4zlQOmZzW8D_py5mu7gSuRC2NSghU49coFdu9J8OjCgW4P-4V6EERaKaJtqOQ=w640-h480-no?authuser=2)
+
+<br><br><br>
+![enter image description here](https://lh3.googleusercontent.com/bY0FrZBsAQcC0JUlqSce0N3YT4ykpSLnJoTeUfvgUBnwjiP0gTuiMehr-BrHw2vrFrZWBtiunjGQbidHIlafQHCb94xMDyh7uqYbpsXljT24vIvdJOZl0Sh5MkiTN_1FYWboDSkBGdTxac5jLaGrCq4U6E40RDybchKwa6yngKbBgVLn1AN-few1JklFWIoc8iihrl0BP8Dd35RsPFbjhldpObW47HCNWL8jfhhqcTDQIYs9whev3dpXptnNfY1Xs_iD1ZLy0muZR4qWPMH3077ChyYajnIvpldfJsG8BloTZaLFMge-lUSZUkPrKUMiyx4Hbemkb1wFg55c9C9BryYKVmoe5tsoMyeRiP3flaZ0yXViWBjSh30Rs94l_JVSVMCmr1aaPYpt12cbNry5MJwPMjhlaB9lvfY_joqGctgkt4dvS6Mh-bY-OYx7STGopngxgrhuFpAFoQ6GPLRhYgLNWPq2EweN5sxBLKTCn64zNWRlBhv5_JYN6wSZZxIgGS6f_iOE4HUb2muWhTlodSAwrR_bDoNDBho56wFk5PY1pf3aNG98TgrsetZjXt9bw8-kT405iJvMhatJtGtoqlnzVuOKsOKcpY48D_FEgYd5A82OcL975Znpcb1TaWX4j1Gw_LPq6icFGByaRAhTpsLrN85b8-gz-rqK414KXTL7KhLwWvz35JZs9Hjc85E26nB5HxYxW1_66wdlrBsqlrGNJYfkparTDKihkrAE60jQ48uOYaBXax09kmulxRJXBVdtMElSNZr7GwGNNPr1Yv2Dn9Bj5mYuI2j1HNmKohHO-wxRS5H1OapH1EQf029JP4t-tI9WfJPTG2Py2PdY3qxYPO-nNEBee1xW-kJmwyM=s800-no?authuser=2)
+
+<br><br><br>
+
+![enter image description here](https://lh3.googleusercontent.com/VEqA2c9RtEl0dxmXR6RwPApgaNvtlqEJUZJPrwNE8zzVQvq-wlMItAFLmhVVsjgu45d_srM4Bt6R5MUI6QwwEjqafUwMy3bih3rEnAFuQM-iYdQTlNctCwWM-tKEF2anOyxY0DnQhbABIQuQE1m03pbOW6Z92RxtlBJuUJMB0IFHb_OSvcAdgaG49sLoY2eKXvt2J3wgF6fbdN-DYrLM25dy-7hK6vRmkozQL3YMvMeRviSbb69RpusCcxD25bbZISVi6RaFB1ZXtWWLvPWR2_bY86nGR3itjASoNQ7azyg8cNvXkTSZo8cspRedQo2s-Y7m8aTBBDIeUcZqxmPtryjgqnzMt3WH-wKHY_aOwpiQYMet5MHpHae6ZwIiwZVkMYLFtWR79TlEfw-b03rLxDQcvWEUrroNtO0Eec6SLulEOo7SgqkG819_ApSLmBUM4ql_w7T4cZCk7rCBbRtPhUlCpdU6z_4CQWYB9lT_anfq3kERtLj8R-ACRGX_--HJz6hwIW_UJtfZNiQ4zstcLTas96ZPvKMt4m5mNvbARUw5i3SRtfcoTitbf-TaPK1ZTwF01CZ1DYt91eYBIz26cRfRDLuPVMLFvPhGvxNLpO61zopXK7fnEDvTWTVsln6ulWPPy1-WGmaE9WJhwcPKDg3tZzWOcylCxq59xKkwz8d6Rf1dmCPTFX53Jkxpc33az1J6JDdYTeB-yzd6aGyzdre3G7BzjKgaa-lNEhZPrbFv0vGzOmwu4hzGBrPV_zEuhssaK-L_fr7d-GTPsmsFeZ4slKxF6z8RaZtgKIfUneZn8_O_vK6RpCzxRebv1yEfeiPDq2EZ3h6Ho1mqcd9Ajw0Qz2-cmPLMQyaDeyd-AwM=w407-h124-no?authuser=2)
