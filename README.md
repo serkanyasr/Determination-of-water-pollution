@@ -1,7 +1,6 @@
 # Determination of water pollution
 
-To find the closest distance of the detected edge to the reference point with a certain rotation. Within the determined edge range, it can be determined whether the part is defective or not.
-
+The aim of the program is to measure the amount of chlorine in the solution. In order to observe the amount of chlorine in the solution, the R,G,B values are measured by adding a chemical substance that gives red tones depending on the amount of chlorine in the water. Correlation estimation is done with the measured R,G,B values.
 ## The following steps were followed as headings in the program:
 <br>
 
